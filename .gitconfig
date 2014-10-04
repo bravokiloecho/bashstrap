@@ -1,5 +1,6 @@
-[alias]
-	# TBC
+# BASHSTRAP .gitconfig
+
+
 [core]
 	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore
@@ -21,3 +22,10 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[user]
+	name = Benjamin E
+	email = ben@dk8.co
+[push]
+	default = simple
+[alias]
+	ca = commit -am
