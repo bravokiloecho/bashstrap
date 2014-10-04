@@ -1,13 +1,16 @@
-### Aliases
+### Load up bashmarks
+source ~/.local/bin/bashmarks.sh
 
-# Open specified files in Sublime Text
-# "s ." will open the current directory in Sublime
-alias s='open -a "Sublime Text"'
+
+### Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+### Aliases
 
 # Color LS
 colorflag="-G"
 alias ls="command ls ${colorflag}"
-alias l="ls -lF ${colorflag}" # all files, in long format
+# alias l="ls -lF ${colorflag}" # all files, in long format
 alias la="ls -laF ${colorflag}" # all files inc dotfiles, in long format
 alias lsd='ls -lF ${colorflag} | grep "^d"' # only directories
 
@@ -30,11 +33,24 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 
 # Git
 # You must install Git first - ""
+
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m' # requires you to type a commit message
+alias ca='commit -am'
 alias gp='git push'
+alias gadd='git add -A :/'
 
+# Git autocompletion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+# Open  current folder in sublime
+alias sub='sublime .'
+
+# Open cursors folder
+alias cursors='cd && cd /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/cursors && open .'
 
 ### Prompt Colors
 # Modified version of @gf3’s Sexy Bash Prompt
@@ -94,7 +110,7 @@ function parse_git_branch() {
 
 # Change this symbol to something sweet.
 # (http://en.wikipedia.org/wiki/Unicode_symbols)
-symbol="⚡ "
+symbol="○ "
 
 export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n$symbol\[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
