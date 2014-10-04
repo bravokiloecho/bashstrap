@@ -32,7 +32,7 @@ Bashstrap is a quick way to spruce up OSX terminal. It cuts out the fluff, adds 
 
 2. Install Bashstrap into your home dir:
 
-		cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
+		cd; curl -#L https://github.com/bravokiloecho/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
 
 ### Installation: iTerm (10 mins)
 
