@@ -37,20 +37,24 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m' # requires you to type a commit message
-alias ca='commit -am'
+alias gca='commit -am'
 alias gp='git push'
 alias gadd='git add -A :/'
+alias gph='git push heroku'
 
 # Git autocompletion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-# Open  current folder in sublime
+### Open current folder in sublime
 alias sub='sublime .'
 
-# Open cursors folder
+### Open cursors folder
 alias cursors='cd && cd /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/cursors && open .'
+
+### Settings for Goodsync
+export PATH="/Users/ben_elwyn/Library/Application Support/GoodSync":$PATH
 
 ### Prompt Colors
 # Modified version of @gf3’s Sexy Bash Prompt
