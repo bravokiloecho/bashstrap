@@ -47,8 +47,19 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+### Open current folder in finder
+alias o.='open .'
+
 ### Open current folder in sublime
 alias sub='sublime .'
+
+### Open bash profile in sublime
+alias basher='cd && sublime ./.bash_profile'
+
+### Open git profile in sublime
+alias gitter='cd && sublime ./.gitconfig'
+
+
 
 ### Open cursors folder
 alias cursors='cd && cd /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/cursors && open .'
