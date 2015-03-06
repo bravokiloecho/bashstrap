@@ -59,7 +59,26 @@ alias basher='cd && sublime ./.bash_profile'
 ### Open git profile in sublime
 alias gitter='cd && sublime ./.gitconfig'
 
-
+### Autocomplete SSH configs
+### From: https://gist.github.com/aliang/1024466
+_complete_ssh_hosts ()
+{
+        COMPREPLY=()
+        cur="${COMP_WORDS[COMP_CWORD]}"
+        comp_ssh_hosts=`cat ~/.ssh/config | \
+                        cut -f 1 -d ' ' | \
+                        sed -e s/,.*//g | \
+                        grep -v ^# | \
+                        uniq | \
+                        grep -v "\[" ;
+                cat ~/.ssh/config | \
+                        grep "^Host " | \
+                        awk '{print $2}'
+                `
+        COMPREPLY=( $(compgen -W "${comp_ssh_hosts}" -- $cur))
+        return 0
+}
+complete -F _complete_ssh_hosts ssh
 
 ### Open cursors folder
 alias cursors='cd && cd /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/cursors && open .'
