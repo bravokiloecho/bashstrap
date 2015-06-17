@@ -1,11 +1,26 @@
 ### Load up bashmarks
 source ~/.local/bin/bashmarks.sh
 
+### RVM told me to do this
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
 
 ### Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+### Add AutoJump config
+### See: https://github.com/joelthelion/autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 ### Aliases
+
+## MAMP THINGS
+
+# Start MAMP MySQL
+alias mysql="/Applications/MAMP/bin/startMysql.sh"
+alias apache="/Applications/MAMP/bin/startApache.sh"
+alias mamp="/Applications/MAMP/bin/start.sh"
+alias mamp_x="/Applications/MAMP/bin/stop.sh"
 
 # Color LS
 colorflag="-G"
@@ -50,14 +65,18 @@ fi
 ### Open current folder in finder
 alias o.='open .'
 
+### Open file in sublime
+alias sub='sublime ./'
+
 ### Open current folder in sublime
-alias sub='sublime .'
+alias sub.='sublime .'
 
 ### Open bash profile in sublime
 alias basher='cd && sublime ./.bash_profile'
 
 ### Open git profile in sublime
 alias gitter='cd && sublime ./.gitconfig'
+
 
 ### Autocomplete SSH configs
 ### From: https://gist.github.com/aliang/1024466
@@ -82,9 +101,6 @@ complete -F _complete_ssh_hosts ssh
 
 ### Open cursors folder
 alias cursors='cd && cd /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/cursors && open .'
-
-### Settings for Goodsync
-export PATH="/Users/ben_elwyn/Library/Application Support/GoodSync":$PATH
 
 ### Prompt Colors
 # Modified version of @gf3’s Sexy Bash Prompt
