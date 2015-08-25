@@ -65,6 +65,9 @@ fi
 ### Open current folder in finder
 alias o.='open .'
 
+#### Open in sublime and run Grunt
+alias sg='sub && grunt'
+
 ### Open file in sublime
 alias sub='sublime ./'
 
