@@ -56,6 +56,7 @@ alias gca='commit -am'
 alias gp='git push'
 alias gadd='git add -A :/'
 alias gph='git push heroku'
+alias gpw='git push web'
 
 # Git autocompletion
 if [ -f ~/.git-completion.bash ]; then
