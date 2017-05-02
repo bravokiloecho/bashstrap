@@ -1,3 +1,8 @@
+source ~/.profile
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+. /Users/benelwyn/torch/install/bin/torch-activate
+
 ### Load up bashmarks
 source ~/.local/bin/bashmarks.sh
 
