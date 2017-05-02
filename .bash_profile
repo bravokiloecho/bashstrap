@@ -78,7 +78,7 @@ alias sub='sublime ./'
 alias sg='sub && grunt'
 
 #### Open in sublime and run node
-alias sg='sub && npm start'
+alias sn='sub && npm start'
 
 ### Open current folder in sublime
 alias sub.='sublime .'
