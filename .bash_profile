@@ -66,11 +66,14 @@ fi
 ### Open current folder in finder
 alias o.='open .'
 
+### Open file in sublime
+alias sub='sublime ./'
+
 #### Open in sublime and run Grunt
 alias sg='sub && grunt'
 
-### Open file in sublime
-alias sub='sublime ./'
+#### Open in sublime and run node
+alias sg='sub && npm start'
 
 ### Open current folder in sublime
 alias sub.='sublime .'
