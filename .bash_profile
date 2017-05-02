@@ -84,6 +84,9 @@ alias basher='cd && sublime ./.bash_profile'
 ### Open git profile in sublime
 alias gitter='cd && sublime ./.gitconfig'
 
+### Start basic python server
+alias pycon='python -m SimpleHTTPServer 8000'
+
 
 ### Autocomplete SSH configs
 ### From: https://gist.github.com/aliang/1024466
