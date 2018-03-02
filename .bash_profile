@@ -92,6 +92,24 @@ alias gitter='cd && sublime ./.gitconfig'
 ### Start basic python server
 alias pycon='python -m SimpleHTTPServer 8000'
 
+### Create elwynco assets
+# Static
+alias assets_s='
+	cp -a /Users/benelwyn/Repositories/assets-elwynco/. ./ &&
+	rm -rf .git && rm -rf node_modules/ && rm .gitignore && rm package.json &&
+	mv .static-gitignore .gitignore && mv static-package.json package.json &&
+	rm .cms-gitignore && rm cms-package.json
+'
+
+# CMS
+alias assets_cms='
+	cp -a /Users/benelwyn/Repositories/assets-elwynco/. ./ &&
+	rm -rf .git && rm -rf node_modules/ && rm .gitignore && rm package.json &&
+	mv .cms-gitignore .gitignore && mv cms-package.json package.json &&
+	rm .static-gitignore && rm static-package.json &&
+	rm -rf temp && rm -rf views && rm -rf public
+'
+
 
 ### Autocomplete SSH configs
 ### From: https://gist.github.com/aliang/1024466
