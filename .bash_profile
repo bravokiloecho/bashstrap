@@ -55,13 +55,15 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # You must install Git first - ""
 
 alias gs='git status'
-alias ga='git add .'
 alias gc='git commit -m' # requires you to type a commit message
 alias gca='commit -am'
+alias ga='git add -A :/ && git commit --amend --no-edit' # Amend previous commit with new changes
 alias gp='git push'
 alias gadd='git add -A :/'
 alias gph='git push heroku'
 alias gpw='git push web'
+alias gcm='git checkout master'
+alias gcd='git checkout dev'
 
 # Git autocompletion
 if [ -f ~/.git-completion.bash ]; then
@@ -109,7 +111,6 @@ alias assets_cms='
 	rm .static-gitignore && rm static-package.json &&
 	rm -rf temp && rm -rf views && rm -rf public
 '
-
 
 ### Autocomplete SSH configs
 ### From: https://gist.github.com/aliang/1024466
