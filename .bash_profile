@@ -88,10 +88,10 @@ alias cod='code .'
 alias sc='code . && npm start'
 
 ### Open bash profile in sublime
-alias basher='cd && sublime ./.bash_profile'
+alias basher='cd && code ./.bash_profile'
 
 ### Open git profile in sublime
-alias gitter='cd && sublime ./.gitconfig'
+alias gitter='cd && code ./.gitconfig'
 
 ### Start basic python server
 alias pycon='python -m SimpleHTTPServer 7000'
