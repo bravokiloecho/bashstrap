@@ -40,10 +40,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Shortcuts to my Code folder in my home directory
-alias code="cd ~/Code"
-alias sites="cd ~/Code/sites"
-
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
@@ -85,6 +81,12 @@ alias sn='sub && npm start'
 ### Open current folder in sublime
 alias sub.='sublime .'
 
+### Open current folder in VS Code
+alias cod='code .'
+
+#### Open in VS CODE and run node
+alias sc='code . && npm start'
+
 ### Open bash profile in sublime
 alias basher='cd && sublime ./.bash_profile'
 
@@ -92,9 +94,16 @@ alias basher='cd && sublime ./.bash_profile'
 alias gitter='cd && sublime ./.gitconfig'
 
 ### Start basic python server
-alias pycon='python -m SimpleHTTPServer 8000'
+alias pycon='python -m SimpleHTTPServer 7000'
 
-### Create elwynco assets
+### CREATE ELWYNCO ASSETS
+
+# STYLES
+alias styles='
+	git clone git@github.com:bravokiloecho/elwynco-sass-styles.git &&
+	rm -rf .git
+'
+
 # Static
 alias assets_s='
 	cp -a /Users/benelwyn/Repositories/assets-elwynco/. ./ &&
